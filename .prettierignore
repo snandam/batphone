@@ -1,0 +1,17 @@
+node_modules
+.next
+.agents
+.claude
+build
+dist
+coverage
+*.min.js
+package-lock.json
+pnpm-lock.yaml
+# drizzle-kit output, regenerated on every db:generate
+drizzle/meta
+videos/
+drafts/
+
+.open-next
+.wrangler

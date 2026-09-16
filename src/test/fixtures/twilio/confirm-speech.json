@@ -1,0 +1,14 @@
+{
+  "AccountSid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "ApiVersion": "2010-04-01",
+  "CallSid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "CallStatus": "in-progress",
+  "Called": "+15005550006",
+  "Caller": "+15551234567",
+  "Confidence": "0.92",
+  "Direction": "inbound",
+  "From": "+15551234567",
+  "Language": "en-US",
+  "SpeechResult": "yes",
+  "To": "+15005550006"
+}

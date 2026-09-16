@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    # A real Postgres so migrations are applied from an empty database before
+    # anything ships. This is the guardrail for the worst incident class:
+    # a schema edit without a generated migration, or a journal that drizzle
+    # silently skips, both surface here instead of in production.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_DB: app
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+
+    env:
+      DATABASE_URL: postgresql://postgres@localhost:5432/app
+      DATABASE_SSL: "false"
+      # next build evaluates src/lib/auth.ts, which throws without these.
+      BETTER_AUTH_SECRET: ci-secret-not-used-at-runtime-0123456789
+      BETTER_AUTH_URL: http://localhost:3000
+      GOOGLE_CLIENT_ID: ci-dummy
+      GOOGLE_CLIENT_SECRET: ci-dummy
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+
+    steps:
+      # Actions are pinned by commit SHA (mutable tags can be overwritten).
+      # Dependabot (.github/dependabot.yml) moves the pins on purpose.
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test
+
+      - name: Apply migrations from an empty database
+        run: npm run db:migrate
+
+      - name: Build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: npm run build
+
+      - name: Start and probe the built app
+        run: |
+          npm run start > /tmp/app.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:3000/api/health > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS http://localhost:3000/api/health
+          curl -fsS http://localhost:3000/api/ready
+
+      - name: Print app log on failure
+        if: failure()
+        run: tail -100 /tmp/app.log || true
+
+      - name: Docker build
+        run: docker build --build-arg NEXT_PUBLIC_APP_URL=https://ci.example.invalid .

@@ -1,0 +1,31 @@
+name: gitleaks
+
+# Full-history secret scan on every push to main and on every pull request.
+# Catches a committed credential before it spreads to forks and CI logs.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    name: Secret Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks (pinned release, checksum verified)
+        run: |
+          curl -sSfL -o gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.24.3/gitleaks_8.24.3_linux_x64.tar.gz
+          echo "9991e0b2903da4c8f6122b5c3186448b927a5da4deef1fe45271c3793f4ee29c  gitleaks.tar.gz" | sha256sum -c -
+          tar xzf gitleaks.tar.gz
+          sudo mv gitleaks /usr/local/bin/
+      - name: Run gitleaks
+        # Scan every fetched ref, not only the checked-out branch, so a
+        # secret on a feature branch is caught before it can be merged.
+        run: gitleaks detect --source . --log-opts="--all" --redact

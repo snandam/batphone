@@ -1,0 +1,1 @@
+ALTER TABLE "user_profile" DROP COLUMN "next_speed_dial";

@@ -1,0 +1,16 @@
+{
+  "AccountSid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "ApiVersion": "2010-04-01",
+  "CallDuration": "42",
+  "CallSid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "CallStatus": "completed",
+  "Called": "+15005550006",
+  "Caller": "+15551234567",
+  "Direction": "inbound",
+  "Duration": "1",
+  "From": "+15551234567",
+  "SequenceNumber": "3",
+  "SipResponseCode": "200",
+  "Timestamp": "Fri, 11 Sep 2026 14:03:27 +0000",
+  "To": "+15005550006"
+}

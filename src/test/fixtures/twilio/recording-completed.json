@@ -1,0 +1,12 @@
+{
+  "AccountSid": "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "CallSid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "RecordingChannels": "2",
+  "RecordingDuration": "42",
+  "RecordingSid": "REcccccccccccccccccccccccccccccccc",
+  "RecordingSource": "DialVerb",
+  "RecordingStartTime": "Fri, 11 Sep 2026 14:02:15 +0000",
+  "RecordingStatus": "completed",
+  "RecordingTrack": "both",
+  "RecordingUrl": "https://api.twilio.com/2010-04-01/Accounts/ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/Recordings/REcccccccccccccccccccccccccccccccc"
+}

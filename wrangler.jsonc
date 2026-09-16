@@ -1,0 +1,62 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "batphone",
+  "main": "worker.ts",
+  "compatibility_date": "2026-09-16",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "batphone",
+    },
+  ],
+  "vars": {
+    "BATPHONE_CLOUDFLARE": "true",
+    "PUBLIC_BASE_URL": "https://batphone.sanjeevnandam.com",
+    "BETTER_AUTH_URL": "https://batphone.sanjeevnandam.com",
+    "NEXT_PUBLIC_APP_URL": "https://batphone.sanjeevnandam.com",
+    "NEXT_PUBLIC_SUPPORT_EMAIL": "support@sanjeevnandam.com",
+  },
+  "queues": {
+    "producers": [
+      {
+        "binding": "BATPHONE_JOBS",
+        "queue": "batphone-postcall",
+      },
+    ],
+    "consumers": [
+      {
+        "queue": "batphone-postcall",
+        "max_batch_size": 1,
+        "max_batch_timeout": 1,
+        "max_retries": 10,
+        "dead_letter_queue": "batphone-postcall-failed",
+        "max_concurrency": 2,
+      },
+    ],
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "473379a235984943af743b0155546fd5",
+    },
+  ],
+  "routes": [
+    {
+      "pattern": "batphone.sanjeevnandam.com",
+      "custom_domain": true,
+    },
+  ],
+  "limits": {
+    "cpu_ms": 1000,
+  },
+}

@@ -1,0 +1,61 @@
+# Dependencies
+node_modules
+npm-debug.log*
+
+# Next.js build output
+.next
+out
+
+# Testing
+coverage
+.nyc_output
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files (secrets)
+.env
+.env.local
+.env.*.local
+
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+!README.md
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Misc
+.eslintcache
+.turbo
+
+# Planning files
+task_plan.md
+progress.md
+findings.md
+
+# Non-runtime project files and local media
+.claude
+.agents
+drafts
+videos
+docs
+.github
+.devcontainer
+
+.open-next
+.wrangler
+.dev.vars*

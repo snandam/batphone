@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`twiml builders > alreadyConnecting snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">Your call is already connecting.</Say></Response>"`;
+
+exports[`twiml builders > apology snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">Sorry, something went wrong. Please try again later. Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > confirmPrompt snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Gather input="speech dtmf" action="https://abc-3000.app.github.dev/api/twilio/gather?callId=c1&amp;attempt=1" method="POST" language="en-US" speechModel="deepgram_nova-3" speechTimeout="2" hints="yes, no, one, two" numDigits="1" timeout="5" actionOnEmptyResult="true"><Say voice="Polly.Joanna-Neural">Mike Anderson. Press 1 or say yes to call, or 2 to try again.</Say></Gather></Response>"`;
+
+exports[`twiml builders > dial snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">Connecting you now.</Say><Dial action="https://abc-3000.app.github.dev/api/twilio/dial-status?callId=c1" method="POST" callerId="+15005550006" record="record-from-answer-dual" timeLimit="1800" recordingStatusCallback="https://abc-3000.app.github.dev/api/twilio/recording?callId=c1" recordingStatusCallbackMethod="POST" recordingStatusCallbackEvent="completed absent"><Number machineDetection="DetectMessageEnd" amdStatusCallback="https://abc-3000.app.github.dev/api/twilio/amd-status?callId=c1" amdStatusCallbackMethod="POST">+15559876543</Number></Dial></Response>"`;
+
+exports[`twiml builders > disambiguationPrompt snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Gather input="dtmf" action="https://abc-3000.app.github.dev/api/twilio/gather?callId=c1&amp;attempt=1" method="POST" numDigits="1" timeout="5" actionOnEmptyResult="true"><Say voice="Polly.Joanna-Neural">I found a few. Press 1 for Mike Anderson, 2 for Mike Brown. Press any other key to try again.</Say></Gather></Response>"`;
+
+exports[`twiml builders > gatherPrompt snapshot for the first attempt with the caller's first name 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Gather input="speech dtmf" action="https://abc-3000.app.github.dev/api/twilio/gather?callId=c1&amp;attempt=1" method="POST" language="en-US" speechModel="deepgram_nova-3" speechTimeout="2" timeout="5" actionOnEmptyResult="true" finishOnKey="#" hints="Mike Anderson, Sarah Chen"><Say voice="Polly.Joanna-Neural">Hi Sanjeev. Who would you like to call?</Say></Gather></Response>"`;
+
+exports[`twiml builders > gatherPrompt snapshot when nothing was heard 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Gather input="speech dtmf" action="https://abc-3000.app.github.dev/api/twilio/gather?callId=c1&amp;attempt=1" method="POST" language="en-US" speechModel="deepgram_nova-3" speechTimeout="2" timeout="5" actionOnEmptyResult="true" finishOnKey="#" hints="Mike Anderson"><Say voice="Polly.Joanna-Neural">Sorry, I didn't catch that. Who would you like to call? You can also press their speed dial, then pound.</Say></Gather></Response>"`;
+
+exports[`twiml builders > gatherPrompt snapshot when speech was heard but not matched 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Gather input="speech dtmf" action="https://abc-3000.app.github.dev/api/twilio/gather?callId=c1&amp;attempt=1" method="POST" language="en-US" speechModel="deepgram_nova-3" speechTimeout="2" timeout="5" actionOnEmptyResult="true" finishOnKey="#" hints="Mike Anderson"><Say voice="Polly.Joanna-Neural">I heard my canderson, and I don't have that contact. Say the name again, or press their speed dial, then pound.</Say></Gather></Response>"`;
+
+exports[`twiml builders > goodbyeNotFound snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">I still couldn't find that contact. Check the name in the app and call again. Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > keypadFallbackPrompt snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Gather input="dtmf" action="https://abc-3000.app.github.dev/api/twilio/gather?callId=c1&amp;attempt=1" method="POST" timeout="5" finishOnKey="#" actionOnEmptyResult="true"><Say voice="Polly.Joanna-Neural">Let's try the keypad. Press their speed dial, then pound.</Say></Gather></Response>"`;
+
+exports[`twiml builders > noContacts snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">You don't have any contacts yet. Add one in the app, then call again. Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > notRegistered snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">This number isn't set up with Bat Phone yet. Add it in the app, then call again. Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > postDialOutcome(busy) snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">Mike Anderson is busy right now. Try again later. Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > postDialOutcome(completed) snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > postDialOutcome(failed) snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">I couldn't connect that call. Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > postDialOutcome(no-answer) snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">Mike Anderson didn't pick up. Try again later. Bye for now.</Say><Hangup/></Response>"`;
+
+exports[`twiml builders > unavailable snapshot 1`] = `"<?xml version="1.0" encoding="UTF-8"?><Response><Say voice="Polly.Joanna-Neural">Bat Phone is unavailable right now. Please try again later. Bye for now.</Say><Hangup/></Response>"`;
