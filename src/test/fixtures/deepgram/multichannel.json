@@ -1,0 +1,655 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "0f2d6f3e-2c5a-4d0b-9c1e-7a8b2f6e4c11",
+    "sha256": "9d4b1c7f3a2e6b8d0c5f1e2a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e",
+    "created": "2026-09-11T14:02:37.512Z",
+    "duration": 13.12,
+    "channels": 2,
+    "models": ["1f3c8b2a-7d4e-4a9b-8c6d-2e5f7a9b1c3d"],
+    "model_info": {
+      "1f3c8b2a-7d4e-4a9b-8c6d-2e5f7a9b1c3d": {
+        "name": "general-nova-3",
+        "version": "2024-12-12.0",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Hey Mike, it's Sanjeev. Do you have a minute? The Phoenix build is failing on the release branch again. Perfect. Thanks.",
+            "confidence": 0.9927,
+            "words": [
+              {
+                "word": "hey",
+                "start": 0.48,
+                "end": 0.72,
+                "confidence": 0.9985,
+                "punctuated_word": "Hey"
+              },
+              {
+                "word": "mike",
+                "start": 0.72,
+                "end": 0.96,
+                "confidence": 0.9971,
+                "punctuated_word": "Mike,"
+              },
+              {
+                "word": "it's",
+                "start": 1.04,
+                "end": 1.2,
+                "confidence": 0.9902,
+                "punctuated_word": "it's"
+              },
+              {
+                "word": "sanjeev",
+                "start": 1.2,
+                "end": 1.68,
+                "confidence": 0.9611,
+                "punctuated_word": "Sanjeev."
+              },
+              {
+                "word": "do",
+                "start": 1.84,
+                "end": 1.92,
+                "confidence": 0.9993,
+                "punctuated_word": "Do"
+              },
+              {
+                "word": "you",
+                "start": 1.92,
+                "end": 2.08,
+                "confidence": 0.9997,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "have",
+                "start": 2.08,
+                "end": 2.24,
+                "confidence": 0.9996,
+                "punctuated_word": "have"
+              },
+              {
+                "word": "a",
+                "start": 2.24,
+                "end": 2.32,
+                "confidence": 0.9994,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "minute",
+                "start": 2.32,
+                "end": 2.72,
+                "confidence": 0.9989,
+                "punctuated_word": "minute?"
+              },
+              {
+                "word": "the",
+                "start": 3.92,
+                "end": 4.0,
+                "confidence": 0.9991,
+                "punctuated_word": "The"
+              },
+              {
+                "word": "phoenix",
+                "start": 4.0,
+                "end": 4.48,
+                "confidence": 0.9874,
+                "punctuated_word": "Phoenix"
+              },
+              {
+                "word": "build",
+                "start": 4.48,
+                "end": 4.8,
+                "confidence": 0.9979,
+                "punctuated_word": "build"
+              },
+              {
+                "word": "is",
+                "start": 4.8,
+                "end": 4.88,
+                "confidence": 0.9996,
+                "punctuated_word": "is"
+              },
+              {
+                "word": "failing",
+                "start": 4.88,
+                "end": 5.28,
+                "confidence": 0.9988,
+                "punctuated_word": "failing"
+              },
+              {
+                "word": "on",
+                "start": 5.28,
+                "end": 5.44,
+                "confidence": 0.9995,
+                "punctuated_word": "on"
+              },
+              {
+                "word": "the",
+                "start": 5.44,
+                "end": 5.52,
+                "confidence": 0.9992,
+                "punctuated_word": "the"
+              },
+              {
+                "word": "release",
+                "start": 5.52,
+                "end": 5.92,
+                "confidence": 0.9984,
+                "punctuated_word": "release"
+              },
+              {
+                "word": "branch",
+                "start": 5.92,
+                "end": 6.32,
+                "confidence": 0.9987,
+                "punctuated_word": "branch"
+              },
+              {
+                "word": "again",
+                "start": 6.32,
+                "end": 6.72,
+                "confidence": 0.9979,
+                "punctuated_word": "again."
+              },
+              {
+                "word": "perfect",
+                "start": 11.6,
+                "end": 12.0,
+                "confidence": 0.9968,
+                "punctuated_word": "Perfect."
+              },
+              {
+                "word": "thanks",
+                "start": 12.08,
+                "end": 12.4,
+                "confidence": 0.9991,
+                "punctuated_word": "Thanks."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nHey Mike, it's Sanjeev. Do you have a minute?\n\nThe Phoenix build is failing on the release branch again.\n\nPerfect. Thanks.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Hey Mike, it's Sanjeev.",
+                      "start": 0.48,
+                      "end": 1.68
+                    },
+                    {
+                      "text": "Do you have a minute?",
+                      "start": 1.84,
+                      "end": 2.72
+                    }
+                  ],
+                  "num_words": 9,
+                  "start": 0.48,
+                  "end": 2.72
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "The Phoenix build is failing on the release branch again.",
+                      "start": 3.92,
+                      "end": 6.72
+                    }
+                  ],
+                  "num_words": 10,
+                  "start": 3.92,
+                  "end": 6.72
+                },
+                {
+                  "sentences": [
+                    { "text": "Perfect.", "start": 11.6, "end": 12.0 },
+                    { "text": "Thanks.", "start": 12.08, "end": 12.4 }
+                  ],
+                  "num_words": 2,
+                  "start": 11.6,
+                  "end": 12.4
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "transcript": "Sure. What's up? Ugh. I'll take a look after lunch and ping you.",
+            "confidence": 0.9884,
+            "words": [
+              {
+                "word": "sure",
+                "start": 2.96,
+                "end": 3.2,
+                "confidence": 0.9963,
+                "punctuated_word": "Sure."
+              },
+              {
+                "word": "what's",
+                "start": 3.28,
+                "end": 3.44,
+                "confidence": 0.9941,
+                "punctuated_word": "What's"
+              },
+              {
+                "word": "up",
+                "start": 3.44,
+                "end": 3.68,
+                "confidence": 0.9972,
+                "punctuated_word": "up?"
+              },
+              {
+                "word": "ugh",
+                "start": 7.36,
+                "end": 7.76,
+                "confidence": 0.8412,
+                "punctuated_word": "Ugh."
+              },
+              {
+                "word": "i'll",
+                "start": 8.08,
+                "end": 8.24,
+                "confidence": 0.9958,
+                "punctuated_word": "I'll"
+              },
+              {
+                "word": "take",
+                "start": 8.24,
+                "end": 8.4,
+                "confidence": 0.9991,
+                "punctuated_word": "take"
+              },
+              {
+                "word": "a",
+                "start": 8.4,
+                "end": 8.48,
+                "confidence": 0.9989,
+                "punctuated_word": "a"
+              },
+              {
+                "word": "look",
+                "start": 8.48,
+                "end": 8.72,
+                "confidence": 0.9993,
+                "punctuated_word": "look"
+              },
+              {
+                "word": "after",
+                "start": 8.72,
+                "end": 9.04,
+                "confidence": 0.9986,
+                "punctuated_word": "after"
+              },
+              {
+                "word": "lunch",
+                "start": 9.04,
+                "end": 9.36,
+                "confidence": 0.9975,
+                "punctuated_word": "lunch"
+              },
+              {
+                "word": "and",
+                "start": 9.36,
+                "end": 9.52,
+                "confidence": 0.9994,
+                "punctuated_word": "and"
+              },
+              {
+                "word": "ping",
+                "start": 9.52,
+                "end": 9.84,
+                "confidence": 0.9827,
+                "punctuated_word": "ping"
+              },
+              {
+                "word": "you",
+                "start": 9.84,
+                "end": 10.16,
+                "confidence": 0.9992,
+                "punctuated_word": "you."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nSure. What's up?\n\nUgh.\n\nI'll take a look after lunch and ping you.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    { "text": "Sure.", "start": 2.96, "end": 3.2 },
+                    { "text": "What's up?", "start": 3.28, "end": 3.68 }
+                  ],
+                  "num_words": 3,
+                  "start": 2.96,
+                  "end": 3.68
+                },
+                {
+                  "sentences": [{ "text": "Ugh.", "start": 7.36, "end": 7.76 }],
+                  "num_words": 1,
+                  "start": 7.36,
+                  "end": 7.76
+                },
+                {
+                  "sentences": [
+                    {
+                      "text": "I'll take a look after lunch and ping you.",
+                      "start": 8.08,
+                      "end": 10.16
+                    }
+                  ],
+                  "num_words": 9,
+                  "start": 8.08,
+                  "end": 10.16
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 0.48,
+        "end": 2.72,
+        "confidence": 0.9931,
+        "channel": 0,
+        "transcript": "Hey Mike, it's Sanjeev. Do you have a minute?",
+        "words": [
+          {
+            "word": "hey",
+            "start": 0.48,
+            "end": 0.72,
+            "confidence": 0.9985,
+            "punctuated_word": "Hey"
+          },
+          {
+            "word": "mike",
+            "start": 0.72,
+            "end": 0.96,
+            "confidence": 0.9971,
+            "punctuated_word": "Mike,"
+          },
+          {
+            "word": "it's",
+            "start": 1.04,
+            "end": 1.2,
+            "confidence": 0.9902,
+            "punctuated_word": "it's"
+          },
+          {
+            "word": "sanjeev",
+            "start": 1.2,
+            "end": 1.68,
+            "confidence": 0.9611,
+            "punctuated_word": "Sanjeev."
+          },
+          {
+            "word": "do",
+            "start": 1.84,
+            "end": 1.92,
+            "confidence": 0.9993,
+            "punctuated_word": "Do"
+          },
+          {
+            "word": "you",
+            "start": 1.92,
+            "end": 2.08,
+            "confidence": 0.9997,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "have",
+            "start": 2.08,
+            "end": 2.24,
+            "confidence": 0.9996,
+            "punctuated_word": "have"
+          },
+          {
+            "word": "a",
+            "start": 2.24,
+            "end": 2.32,
+            "confidence": 0.9994,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "minute",
+            "start": 2.32,
+            "end": 2.72,
+            "confidence": 0.9989,
+            "punctuated_word": "minute?"
+          }
+        ],
+        "id": "6c1a2b3d-0001-4e5f-8a9b-0c1d2e3f4a5b"
+      },
+      {
+        "start": 3.92,
+        "end": 6.72,
+        "confidence": 0.9963,
+        "channel": 0,
+        "transcript": "The Phoenix build is failing on the release branch again.",
+        "words": [
+          {
+            "word": "the",
+            "start": 3.92,
+            "end": 4.0,
+            "confidence": 0.9991,
+            "punctuated_word": "The"
+          },
+          {
+            "word": "phoenix",
+            "start": 4.0,
+            "end": 4.48,
+            "confidence": 0.9874,
+            "punctuated_word": "Phoenix"
+          },
+          {
+            "word": "build",
+            "start": 4.48,
+            "end": 4.8,
+            "confidence": 0.9979,
+            "punctuated_word": "build"
+          },
+          {
+            "word": "is",
+            "start": 4.8,
+            "end": 4.88,
+            "confidence": 0.9996,
+            "punctuated_word": "is"
+          },
+          {
+            "word": "failing",
+            "start": 4.88,
+            "end": 5.28,
+            "confidence": 0.9988,
+            "punctuated_word": "failing"
+          },
+          {
+            "word": "on",
+            "start": 5.28,
+            "end": 5.44,
+            "confidence": 0.9995,
+            "punctuated_word": "on"
+          },
+          {
+            "word": "the",
+            "start": 5.44,
+            "end": 5.52,
+            "confidence": 0.9992,
+            "punctuated_word": "the"
+          },
+          {
+            "word": "release",
+            "start": 5.52,
+            "end": 5.92,
+            "confidence": 0.9984,
+            "punctuated_word": "release"
+          },
+          {
+            "word": "branch",
+            "start": 5.92,
+            "end": 6.32,
+            "confidence": 0.9987,
+            "punctuated_word": "branch"
+          },
+          {
+            "word": "again",
+            "start": 6.32,
+            "end": 6.72,
+            "confidence": 0.9979,
+            "punctuated_word": "again."
+          }
+        ],
+        "id": "6c1a2b3d-0002-4e5f-8a9b-0c1d2e3f4a5b"
+      },
+      {
+        "start": 11.6,
+        "end": 12.4,
+        "confidence": 0.998,
+        "channel": 0,
+        "transcript": "Perfect. Thanks.",
+        "words": [
+          {
+            "word": "perfect",
+            "start": 11.6,
+            "end": 12.0,
+            "confidence": 0.9968,
+            "punctuated_word": "Perfect."
+          },
+          {
+            "word": "thanks",
+            "start": 12.08,
+            "end": 12.4,
+            "confidence": 0.9991,
+            "punctuated_word": "Thanks."
+          }
+        ],
+        "id": "6c1a2b3d-0003-4e5f-8a9b-0c1d2e3f4a5b"
+      },
+      {
+        "start": 2.96,
+        "end": 3.68,
+        "confidence": 0.9959,
+        "channel": 1,
+        "transcript": "Sure. What's up?",
+        "words": [
+          {
+            "word": "sure",
+            "start": 2.96,
+            "end": 3.2,
+            "confidence": 0.9963,
+            "punctuated_word": "Sure."
+          },
+          {
+            "word": "what's",
+            "start": 3.28,
+            "end": 3.44,
+            "confidence": 0.9941,
+            "punctuated_word": "What's"
+          },
+          {
+            "word": "up",
+            "start": 3.44,
+            "end": 3.68,
+            "confidence": 0.9972,
+            "punctuated_word": "up?"
+          }
+        ],
+        "id": "6c1a2b3d-0004-4e5f-8a9b-0c1d2e3f4a5b"
+      },
+      {
+        "start": 7.36,
+        "end": 7.76,
+        "confidence": 0.8412,
+        "channel": 1,
+        "transcript": "Ugh.",
+        "words": [
+          {
+            "word": "ugh",
+            "start": 7.36,
+            "end": 7.76,
+            "confidence": 0.8412,
+            "punctuated_word": "Ugh."
+          }
+        ],
+        "id": "6c1a2b3d-0005-4e5f-8a9b-0c1d2e3f4a5b"
+      },
+      {
+        "start": 8.08,
+        "end": 10.16,
+        "confidence": 0.9967,
+        "channel": 1,
+        "transcript": "I'll take a look after lunch and ping you.",
+        "words": [
+          {
+            "word": "i'll",
+            "start": 8.08,
+            "end": 8.24,
+            "confidence": 0.9958,
+            "punctuated_word": "I'll"
+          },
+          {
+            "word": "take",
+            "start": 8.24,
+            "end": 8.4,
+            "confidence": 0.9991,
+            "punctuated_word": "take"
+          },
+          {
+            "word": "a",
+            "start": 8.4,
+            "end": 8.48,
+            "confidence": 0.9989,
+            "punctuated_word": "a"
+          },
+          {
+            "word": "look",
+            "start": 8.48,
+            "end": 8.72,
+            "confidence": 0.9993,
+            "punctuated_word": "look"
+          },
+          {
+            "word": "after",
+            "start": 8.72,
+            "end": 9.04,
+            "confidence": 0.9986,
+            "punctuated_word": "after"
+          },
+          {
+            "word": "lunch",
+            "start": 9.04,
+            "end": 9.36,
+            "confidence": 0.9975,
+            "punctuated_word": "lunch"
+          },
+          {
+            "word": "and",
+            "start": 9.36,
+            "end": 9.52,
+            "confidence": 0.9994,
+            "punctuated_word": "and"
+          },
+          {
+            "word": "ping",
+            "start": 9.52,
+            "end": 9.84,
+            "confidence": 0.9827,
+            "punctuated_word": "ping"
+          },
+          {
+            "word": "you",
+            "start": 9.84,
+            "end": 10.16,
+            "confidence": 0.9992,
+            "punctuated_word": "you."
+          }
+        ],
+        "id": "6c1a2b3d-0006-4e5f-8a9b-0c1d2e3f4a5b"
+      }
+    ]
+  }
+}

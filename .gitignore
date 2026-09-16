@@ -1,0 +1,76 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+*.crt
+*.cer
+*.key
+*.p12
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+!.env.example
+# Keep .env.example for documentation
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# serwist (service worker build output)
+public/sw*
+public/swe-worker*
+
+# plan files
+findings.md
+progress.md
+task_plan.md
+
+# Local agent tooling and media work (not part of the app)
+/.claude/
+/.agents/
+/drafts/
+/videos/
+
+# Private source material stays outside the public repository
+/docs/Bat Phone.pdf
+
+# Cloudflare local state and generated output
+/.open-next/
+/.wrangler/
+.dev.vars
+.dev.vars.*
